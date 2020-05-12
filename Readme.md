@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Влад Вишневский](https://up.htmlacademy.ru/htmlcss/28/user/1169525).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Поданев](https://htmlacademy.ru/profile/mpodanev).
 
 ---
 
