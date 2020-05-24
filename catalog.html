@@ -40,14 +40,20 @@
       </div>
 
       <section>
-        <form action="https://echo.htmlacademy.ru" method="GET" oninput=""> <!-- Перенес range в этот блок иначе он не попадает в отправку формы, oniptut пустой я так понимаю там вызов функции подсчета из JS-->
+        <form action="https://echo.htmlacademy.ru" method="GET" oninput="">
           <fieldset>
             <legend><h3>Стоимость:</h3></legend>
             <label>
-              <input type="range" name="price" step="100" min="0" max="15000" value="9000"> <!--Бегунок только один второй можно сделать только с JS как я понял!-->
+              <input type="range" name="price" step="100" min="0" max="15000" value="9000">
               <p>
-                От <output name="min">0</output>
-                До <output name="max">15000</output>
+                <label>
+                  От
+                  <input type="text" name="min" value="0">
+                </label>
+                <label>
+                  До
+                  <input type="text" name="max" value="15000">
+                </label>
               </p>
             </label>
           </fieldset>
