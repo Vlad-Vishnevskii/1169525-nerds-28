@@ -3,6 +3,7 @@
   --grey-dark: #DFDFDF;
   --grey-extra-dark: #D5D5D5;
   --basic-white: #ffffff;
+  --basic-white-opacity: rgba(255,255,255,0.3);
   --basic-black: #000000;
   --basic-red: #FB565A;
   --red-dark: #E74246;
@@ -16,6 +17,8 @@
   --light-black: #283136;
   --lighter-black: #444444;
   --extra-light-black: #666666;
+  --black-opacity-low: rgba(0,0,0,0.3);
+  --social-btn-grey: #e1e1e1;
 }
 
 body {
@@ -84,11 +87,6 @@ img {
   opacity: 0.3;
 }
 
-.navigation a:focus {
-  outline: none;
-  border-bottom: 2px solid var(--basic-red);
-}
-
 .basket {
   position: relative;
 }
@@ -133,7 +131,7 @@ img {
 
 .btn-red:active {
   background-color: var(--red-extra-dark);
-  color: rgba(255,255,255,0.3);
+  color: var(--basic-white-opacity);
 }
 
 .btn-green {
@@ -146,7 +144,7 @@ img {
 
 .btn-green:active {
   background-color: var(--green-extra-dark);
-  color: rgba(255,255,255,0.3);
+  color: var(--basic-white-opacity);
 }
 
 .btn-yellow {
@@ -159,7 +157,7 @@ img {
 
 .btn-yellow:active {
   background-color: var(--yellow-extra-dark);
-  color: rgba(255,255,255,0.3);
+  color: var(--basic-white-opacity);
 }
 
 /* Подвал*/
@@ -167,30 +165,23 @@ img {
   list-style: none;
 }
 
-.social-btn {
+.social-list li{
+  background-color: var(--social-btn-grey);
   width: 81px;
   height: 81px;
-  border-radius: 50%;
-  background-color:#e1e1e1;
+  text-align: center;
 }
 
-
-.btn-vk {
-  background-image: url("../img/vk-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
+.btn-vk::before {
+  content: url("../img/vk-icon.svg");
 }
 
-.btn-facebook {
-  background-image: url("../img/fb-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
+.btn-facebook::before {
+  content: url("../img/fb-icon.svg");
 }
 
-.btn-instagram {
-  background-image: url("../img/insta-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
+.btn-instagram::before {
+  content: url("../img/insta-icon.svg");
 }
 
 .suggest {
@@ -233,7 +224,7 @@ img {
   background-color: var(--basic-grey);
   font-weight: 500;
   font-size: 16px;
-  line-height:18px;
+  line-height: 18px;
 }
 
 .filter-btn:hover {
@@ -242,7 +233,7 @@ img {
 
 .filter-btn:active {
   background-color: var(--grey-extra-dark);
-  color: rgba(0,0,0,0.3);
+  color: var(--black-opacity-low);
 }
 
 /*карточки товаров*/
@@ -266,7 +257,7 @@ img {
 }
 
 .link-name:hover {
-  color:var(--basic-red);
+  color: var(--basic-red);
 }
 
 .link-name:active {
@@ -292,15 +283,3 @@ img {
 .btn-price:active {
   background-color: var(--red-extra-dark);
 }
-
-
-
-
-
-
-
-
-
-
-
-
