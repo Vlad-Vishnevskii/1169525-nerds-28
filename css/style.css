@@ -1,0 +1,306 @@
+:root {
+  --basic-grey: #eeeeee;
+  --grey-dark: #DFDFDF;
+  --grey-extra-dark: #D5D5D5;
+  --basic-white: #ffffff;
+  --basic-black: #000000;
+  --basic-red: #FB565A;
+  --red-dark: #E74246;
+  --red-extra-dark: #D7373B;
+  --basic-green: #00CA74;
+  --green-dark: #00BC6C;
+  --green-extra-dark: #00AA62;
+  --basic-yellow: #EFC849;
+  --yellow-dark: #EAB534;
+  --yellow-extra-dark: #E5A722;
+  --light-black: #283136;
+  --lighter-black: #444444;
+  --extra-light-black: #666666;
+}
+
+body {
+  width: 1460px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/* Стилизация index.html*/
+
+/*Шапка*/
+.navigation {
+  list-style: none;
+}
+
+.main-header {
+  background-color: var(--basic-grey);
+}
+
+.main-header h1 {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+}
+
+.navigation a,
+.basket {
+  color: var(--basic-black);
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.main-header-logo:active {
+  opacity: 0.2;
+}
+
+.navigation a:hover {
+  color: var(--basic-red);
+}
+
+.navigation a:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.navigation a:focus {
+  outline: none;
+  border-bottom: 2px solid var(--basic-red);
+}
+
+.basket {
+  position: relative;
+}
+
+.basket::before {
+  content:url("../img/cart-icon.svg");
+  position: absolute;
+  left: -24.84px;
+}
+
+/*преимущества*/
+
+.advantages-item h3 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.advantages-list {
+  list-style: none;
+}
+
+.advantages-description {
+  color: var(--light-black);
+}
+
+.btn {
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+
+.btn-red {
+  background-color: var(--basic-red);
+}
+
+.btn-red:hover {
+  background-color: var(--red-dark);
+}
+
+.btn-red:active {
+  background-color: var(--red-extra-dark);
+  color: rgba(255,255,255,0.3);
+}
+
+.btn-green {
+  background-color: var(--basic-green);
+}
+
+.btn-green:hover {
+  background-color: var(--green-dark);
+}
+
+.btn-green:active {
+  background-color: var(--green-extra-dark);
+  color: rgba(255,255,255,0.3);
+}
+
+.btn-yellow {
+  background-color: var(--basic-yellow);
+}
+
+.btn-yellow:hover {
+  background-color: var(--yellow-dark);
+}
+
+.btn-yellow:active {
+  background-color: var(--yellow-extra-dark);
+  color: rgba(255,255,255,0.3);
+}
+
+/* Подвал*/
+.social-list {
+  list-style: none;
+}
+
+.social-btn {
+  width: 81px;
+  height: 81px;
+  border-radius: 50%;
+  background-color:#e1e1e1;
+}
+
+
+.btn-vk {
+  background-image: url("../img/vk-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.btn-facebook {
+  background-image: url("../img/fb-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.btn-instagram {
+  background-image: url("../img/insta-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.suggest {
+  color: var(--lighter-black);
+  line-height: 22px;
+}
+
+.suggest h2 {
+  color: var(--basic-black);
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: bold;
+}
+
+.social-btn:hover {
+  background-color: var(--red-dark);
+}
+
+.social-btn:active {
+  background-color: var(--red-extra-dark);
+}
+
+.popap {
+  display: none;
+}
+
+/* Стилизация catalog.html*/
+
+/*фильтр*/
+.grid-list,
+.features {
+  list-style: none;
+  color: var(--light-black);
+  line-height: 19px;
+}
+
+.filter-btn {
+  border: none;
+  border-radius: 3px;
+  background-color: var(--basic-grey);
+  font-weight: 500;
+  font-size: 16px;
+  line-height:18px;
+}
+
+.filter-btn:hover {
+  background-color: var(--grey-dark);
+}
+
+.filter-btn:active {
+  background-color: var(--grey-extra-dark);
+  color: rgba(0,0,0,0.3);
+}
+
+/*карточки товаров*/
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-card {
+  background-color: var(--basic-grey);
+  text-align: center;
+  width: 360px;
+}
+
+.link-name {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  color: var(--basic-black);
+}
+
+.link-name:hover {
+  color:var(--basic-red);
+}
+
+.link-name:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.description {
+  line-height: 18px;
+  color: var(--extra-light-black);
+}
+
+.btn-price {
+  background-color: var(--basic-red);
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.btn-price:hover {
+  background-color: var(--red-dark);
+}
+
+.btn-price:active {
+  background-color: var(--red-extra-dark);
+}
+
+
+
+
+
+
+
+
+
+
+
+

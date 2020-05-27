@@ -3,20 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="index.html">
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a href="index.html" class="main-header-logo">
           <img src="img/nerds-logo.svg" width="160" alt="Логотип Нёрдс">
         </a>
-        <ul>
+        <ul class="navigation">
           <li><a href="blank.html">Студия</a></li>
           <li><a href="blank.html">Клиенты</a></li>
           <li><a href="catalog.html">Магазин</a></li>
           <li><a href="blank.html">Контакты</a></li>
+          <a class="basket" href="blank.html">Корзина</a>
         </ul>
-        <a href="blank.html">Корзина</a>
       </nav>
       <h1>Магазин готовых шаблонов</h1>
     </header>
@@ -43,19 +46,20 @@
         </div>
       </div>
 
-      <ul>
-        <li><a href="https://www.vk.com/"><span class="visually-hidden">Вконтакте</span></a></li>
-        <li><a href="https://www.facebook.com/"><span class="visually-hidden">Фейсбук</span></a></li>
-        <li><a href="https://www.instagram.com/"><span class="visually-hidden">Инстаграм</span></a></li>
+      <ul class="social-list">
+        <li class="social-btn btn-vk"><a href="https://www.vk.com/"><span class="visually-hidden">Вконтакте</span></a></li>
+        <li class="social-btn btn-facebook"><a href="https://www.facebook.com/"><span class="visually-hidden">Фейсбук</span></a></li>
+        <li class="social-btn btn-instagram"><a href="https://www.instagram.com/"><span class="visually-hidden">Инстаграм</span></a></li>
       </ul>
 
-       <div>
+      <div class="suggest">
         <h2>Давайте дружить, это выгодно!</h2>
         Скидка 10% для друзей из социальных сетей.
       </div>
+
     </footer>
 
-    <section>
+    <section class="popap">
       <h2>Напишите нам</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
         <p>
