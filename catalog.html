@@ -16,7 +16,7 @@
         <ul class="navigation">
           <li><a href="blank.html">Студия</a></li>
           <li><a href="blank.html">Клиенты</a></li>
-          <li><a href="catalog.html">Магазин</a></li>
+          <li><a class="menu-active" href="catalog.html">Магазин</a></li>
           <li><a href="blank.html">Контакты</a></li>
           <a class="basket" href="blank.html">Корзина</a>
         </ul>
@@ -25,26 +25,26 @@
     </header>
 
     <main>
-      <div class="sort">
+      <div class="sort-menu">
         <h3>Сортировать:</h3>
-        <ul>
-          <li><a href="">По цене</a></li>
-          <li><a href="">По типу</a></li>
-          <li><a href="">По названию</a></li>
+        <ul class="list-sort-type">
+          <li><a class="sort-active sort-btn" href="">По цене</a></li>
+          <li><a class="sort-btn" href="">По типу</a></li>
+          <li><a class="sort-btn" href="">По названию</a></li>
         </ul>
-        <ul>
+        <ul class="list-sort-direction">
           <li>
-            <a href="">По убыванию</a>
+            <a class="sort-active sort-btn" href="">По убыванию</a>
           </li>
           <li>
-            <a href="">По возрастанию</a>
+            <a class="sort-btn" href="">По возрастанию</a>
           </li>
         </ul>
       </div>
 
       <section class="filter">
         <form action="https://echo.htmlacademy.ru" method="GET" oninput="">
-          <fieldset>
+          <fieldset class="filter-price">
             <legend><h3>Стоимость:</h3></legend>
             <label>
               <input type="range" name="price" step="100" min="0" max="15000" value="9000">
@@ -60,7 +60,7 @@
               </p>
             </label>
           </fieldset>
-          <fieldset>
+          <fieldset class="grid-type">
             <legend><h3>Сетка:</h3></legend>
             <ul class="grid-list">
               <li class="grid-item">
@@ -83,7 +83,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter-features">
             <legend><h3>Особенности:</h3></legend>
             <ul class="features">
               <li class="feature-item">
@@ -218,10 +218,10 @@
       </section>
 
       <ul class="paginator">
-        <li><a>1</a></li>
-        <li><a href="blank.html">2</a></li>
-        <li><a href="blank.html">3</a></li>
-        <li><a href="blank.html">Следующая</a></li>
+        <li><a class="page-btn page-active">1</a></li>
+        <li><a class="page-btn" href="blank.html">2</a></li>
+        <li><a class="page-btn" href="blank.html">3</a></li>
+        <li><a class="page-btn next-page-btn" href="blank.html">Следующая</a></li>
       </ul>
 
     </main>
@@ -229,7 +229,7 @@
     <footer>
       <div class="map">
         <div class="contacts">
-          <h3>Nёrds design studio</h3>
+          <h3>NЁRDS DESIGN STUDIO</h3>
           <p>
             191186, Санкт-Петербург,<br>
             ул. Б. Конюшенная, д. 19/8
@@ -238,16 +238,15 @@
             тел. +7 (812) 275-75-75
           </p>
           <p>
-            <a href="">Напишите нам</a>
+            <a class="btn btn-write" href="">Напишите нам</a>
           </p>
-
         </div>
       </div>
 
       <ul class="social-list">
         <li class="social-btn"><a class="btn-vk" href="https://www.vk.com/"><span class="visually-hidden">Вконтакте</span></a></li>
         <li class="social-btn"><a class="btn-facebook" href="https://www.facebook.com/"><span class="visually-hidden">Фейсбук</span></a></li>
-        <li class="social-btn"><a class="social-btn btn-instagram" href="https://www.instagram.com/"><span class="visually-hidden">Инстаграм</span></a></li>
+        <li class="social-btn"><a class="btn-instagram" href="https://www.instagram.com/"><span class="visually-hidden">Инстаграм</span></a></li>
       </ul>
 
       <div class="suggest">
