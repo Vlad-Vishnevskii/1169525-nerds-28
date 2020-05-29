@@ -283,8 +283,7 @@ th sup {
   display: flex;
   background-image: url("../img/map1.png");
   width: 1440px;
-  height: 416px;
-  position: relative;
+  min-height: 416px;
 }
 
 .contacts h3{
@@ -316,13 +315,6 @@ th sup {
 .btn-write:active{
   background-color: var(--red-extra-dark);
   color: var(--basic-white-opacity);
-}
-
-.contacts::after{
-  content: url("../img/map-marker1.png");
-  position: absolute;
-  right: 387px;
-  top: 85px;
 }
 
 .social-list {
@@ -399,6 +391,13 @@ th sup {
   color: var(--basic-black);
 }
 
+.btn-down::before{
+  content: url("../img/icon-down-dir.svg");
+}
+
+.btn-up{
+  content: url("../img/icon-up-dir.svg");
+}
 
 .sort-btn:hover {
   opacity: 0.6;
