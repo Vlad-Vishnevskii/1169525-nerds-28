@@ -50,9 +50,48 @@ img {
   margin: -1px;
 }
 
+.container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+/*grid*/
+.page{
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+/* Grid for pages */
+
+/*.page-catalog {
+  outline-offset: -5px;
+  outline: 5px solid rgba(255, 0, 0, 0.7);
+}
+
+.page-catalog .sort-menu {
+  outline-offset: -5px;
+  outline: 5px solid rgba(0, 255, 0, 0.7);
+}
+
+.page-catalog .filter {
+  outline-offset: -5px;
+  outline: 5px solid rgba(0, 0, 255, 0.7);
+}*/
+
 /* Стилизация index.html*/
 
 /*Шапка*/
+
+.main-header h1 {
+  text-align: center;
+  margin-bottom: 108px;
+}
 .navigation {
   list-style: none;
   margin-bottom: 0;
@@ -60,12 +99,38 @@ img {
 
 .main-header {
   background-color: var(--basic-grey);
+  padding-top: 48.98px;
+}
+
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navigation li {
+  margin-right: 44px;
+}
+
+.navigation li:nth-last-child() {
+  margin-right: 0;
 }
 
 .main-header h1 {
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
+}
+
+/* logo */
+
+.main-header-logo {
 }
 
 .navigation a,
@@ -80,17 +145,24 @@ img {
   opacity: 0.2;
 }
 
-.navigation a:hover {
+.navigation a:hover,
+.basket:hover {
   color: var(--basic-red);
 }
 
-.navigation a:active {
+.navigation a:active,
+.basket:active {
   color: var(--basic-black);
   opacity: 0.3;
 }
 
 .menu-active{
   border-bottom: 2px solid var(--basic-red);
+}
+
+.basket-container{
+  display: flex;
+  align-items: center;
 }
 
 .basket {
@@ -145,6 +217,10 @@ img {
 
 /*преимущества*/
 
+.advantages {
+  padding-top: 65px;
+}
+
 .advantages-item h3 {
   font-weight: bold;
   font-size: 24px;
@@ -154,6 +230,15 @@ img {
 
 .advantages-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 100px;
+}
+
+.advantages-item {
+  width: 300px;
 }
 
 .advantages-description {
@@ -161,6 +246,7 @@ img {
 }
 
 .btn {
+  display: inline-block;
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
@@ -277,7 +363,7 @@ th sup {
   opacity: 0.1;
 }
 
-/* Подвал*/
+/* Футер*/
 
 .map{
   display: flex;
@@ -300,6 +386,10 @@ th sup {
   padding-right: 50px;
 }
 
+.contacts p:nth-child(3) {
+  margin-bottom: 37.29px;
+}
+
 .btn-write{
   background-color: var(--basic-red);
   padding-top: 17px;
@@ -317,8 +407,22 @@ th sup {
   color: var(--basic-white-opacity);
 }
 
+.footer-down {
+  display: flex;
+  align-items: center;
+  min-height: 217px;
+}
+
 .social-list {
   list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-right: 139px;
+}
+
+.social-list li{
+  margin-right: 9px;
 }
 
 .social-btn{
@@ -369,7 +473,18 @@ th sup {
 
 /* Стилизация catalog.html*/
 
+.page-catalog {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: auto auto;
+}
+
+
 /* меню сортировки */
+
+.sort-menu {
+  grid-column: 1 / -1;
+}
 
 .list-sort-type,
 .list-sort-direction {
@@ -410,6 +525,12 @@ th sup {
 
 /*фильтр*/
 
+.filter fieldset {
+  border: none;
+}
+
+
+
 .filter h3 {
   font-weight: bold;
   font-size: 18px;
@@ -434,6 +555,11 @@ th sup {
   text-align: center;
 }
 
+.grid-type h3,
+.filter-features h3 {
+  margin: 13px 0;
+}
+
 .grid-type,
 .filter-features {
   line-height: 19px;
@@ -442,6 +568,8 @@ th sup {
 
 .grid-list,
 .features {
+  margin-top: 0;
+  padding: 0;
   list-style: none;
   color: var(--light-black);
   line-height: 19px;
@@ -475,12 +603,23 @@ th sup {
 
 .catalog-list {
   list-style: none;
+  display: grid;
+  grid-template-columns: 360px 360px;
+  column-gap: 41px;
+  row-gap: 31px;
+  margin-left: 100px;
 }
 
 .catalog-card {
+  display: none;
   background-color: var(--basic-grey);
   text-align: center;
   width: 360px;
+}
+
+.catalog-item {
+  box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);
+  border-radius: 5px;
 }
 
 .link-name {

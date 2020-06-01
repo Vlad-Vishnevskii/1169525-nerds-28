@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
@@ -7,20 +7,24 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="page-body">
     <header class="main-header">
-      <nav class="main-navigation">
-        <a href="index.html" class="main-header-logo">
-          <img src="img/nerds-logo.svg" width="160" alt="Логотип Нёрдс">
-        </a>
-        <ul class="navigation">
-          <li><a href="blank.html">Студия</a></li>
-          <li><a href="blank.html">Клиенты</a></li>
-          <li><a href="catalog.html">Магазин</a></li>
-          <li><a class="menu-active" href="blank.html">Контакты</a></li>
-          <a class="basket" href="blank.html">Корзина</a>
-        </ul>
-      </nav>
+      <div class="container">
+        <nav class="main-navigation">
+          <a href="index.html" class="main-header-logo">
+            <img src="img/nerds-logo.svg" width="160" alt="Логотип Нёрдс">
+          </a>
+          <ul class="navigation">
+            <li><a href="blank.html">Студия</a></li>
+            <li><a href="blank.html">Клиенты</a></li>
+            <li><a href="catalog.html">Магазин</a></li>
+            <li><a class="menu-active" href="blank.html">Контакты</a></li>
+          </ul>
+          <div class="basket-container">
+            <a class="basket" href="blank.html">Корзина</a>
+          </div>
+        </nav>
+      </div>
       <h1>Магазин готовых шаблонов</h1>
     </header>
 
@@ -45,11 +49,12 @@
         </div>
       </div>
 
-      <ul class="social-list">
-        <li><a class="social-btn btn-vk" href="https://www.vk.com/"><span class="visually-hidden">Вконтакте</span></a></li>
-        <li><a class="social-btn btn-facebook" href="https://www.facebook.com/"><span class="visually-hidden">Фейсбук</span></a></li>
-        <li><a class="social-btn btn-instagram" href="https://www.instagram.com/"><span class="visually-hidden">Инстаграм</span></a></li>
-      </ul>
+      <div class="footer-down container">
+        <ul class="social-list">
+          <li><a class="social-btn btn-vk" href="https://www.vk.com/"><span class="visually-hidden">Вконтакте</span></a></li>
+          <li><a class="social-btn btn-facebook" href="https://www.facebook.com/"><span class="visually-hidden">Фейсбук</span></a></li>
+          <li><a class="social-btn btn-instagram" href="https://www.instagram.com/"><span class="visually-hidden">Инстаграм</span></a></li>
+        </ul>
 
       <div class="suggest">
         <h2>Давайте дружить, это выгодно!</h2>
