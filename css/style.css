@@ -167,6 +167,11 @@ img {
   padding: 0;
 }
 
+.slaider-img {
+  width: 760px;
+  height: 431px;
+}
+
 .slaider-list-item {
   display: flex;
   position: relative;
@@ -500,22 +505,18 @@ th sup {
 /* Стилизация catalog.html*/
 
 .page-catalog {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  grid-template-rows: auto auto;
+  display: flex;
 }
-
 
 /* меню сортировки */
 
 .sort-menu {
-  grid-column: 1 / -1;
   display: flex;
+  margin-bottom: 48px;
 }
 
-.price-title {
-  order: -1;
-  margin-right: 285px;
+.sort-menu h3 {
+  margin-bottom: 0;
 }
 
 .list-sort-type,
@@ -581,13 +582,15 @@ th sup {
   border: none;
 }
 
-
-
 .filter h3 {
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.filter-price h3{
+  margin-bottom: 48px;
 }
 
 .filter-price p{
@@ -653,14 +656,22 @@ th sup {
 
 /*карточки товаров*/
 
+.catalog-container {
+  display: flex;
+  flex: wrap;
+  flex-direction: column;
+  margin-left: 140px;
+}
+
 .catalog-list {
   list-style: none;
-  display: grid;
-  grid-template-columns: 360px 360px;
-  column-gap: 41px;
-  row-gap: 31px;
-  margin-left: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
+
 
 .catalog-card {
   display: none;
@@ -673,6 +684,8 @@ th sup {
   box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);
   border-radius: 5px;
 }
+
+
 
 .link-name {
   text-transform: uppercase;
@@ -714,12 +727,13 @@ th sup {
   background-color: var(--red-extra-dark);
 }
 
+/* Пагинатор*/
+
 .paginator{
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
-  margin-left: 400px;
   padding-top: 55px;
   padding-bottom: 60px;
 }

@@ -29,41 +29,20 @@
     </header>
 
     <main class="page-catalog container">
-      <div class="sort-menu">
-        <h3>Сортировать:</h3>
-        <ul class="list-sort-type">
-          <li><a class="sort-active sort-btn" href="">По цене</a></li>
-          <li><a class="sort-btn" href="">По типу</a></li>
-          <li><a class="sort-btn" href="">По названию</a></li>
-        </ul>
-        <ul class="list-sort-direction">
-          <li>
-            <a class="sort-active sort-btn btn-down" href=""><span class="visually-hidden">По убыванию</span></a>
-          </li>
-          <li>
-            <a class="sort-btn btn-up" href=""><span class="visually-hidden">По возрастанию</span></a>
-          </li>
-        </ul>
-        <h3 class="price-title">Стоимость:</h3>
-      </div>
 
       <section class="filter">
         <form action="https://echo.htmlacademy.ru" method="GET" oninput="">
           <fieldset class="filter-price">
-            <legend class="visually-hidden">Стоимость:</legend>
-            <label>
-              <input type="range" name="price" step="100" min="0" max="15000" value="9000">
-              <p>
-                <label>
-                  От
-                  <input type="text" name="min" value="0">
-                </label>
-                <label>
-                  До
-                  <input type="text" name="max" value="15000">
-                </label>
-              </p>
-            </label>
+            <legend><h3>Стоимость:</h3></legend>
+            <input type="range" name="price" step="100" min="0" max="15000" value="9000">
+              <label>
+                <br>От
+                <input type="text" name="min" value="0">
+              </label>
+              <label>
+                До
+                <input type="text" name="max" value="15000">
+              </label>
           </fieldset>
           <fieldset class="grid-type">
             <legend><h3>Сетка:</h3></legend>
@@ -127,7 +106,25 @@
         </form>
       </section>
 
-      <section class="catalog">
+      <div class="catalog-container">
+        <div class="sort-menu">
+          <h3>Сортировать:</h3>
+          <ul class="list-sort-type">
+            <li><a class="sort-active sort-btn" href="">По цене</a></li>
+            <li><a class="sort-btn" href="">По типу</a></li>
+            <li><a class="sort-btn" href="">По названию</a></li>
+          </ul>
+          <ul class="list-sort-direction">
+            <li>
+              <a class="sort-active sort-btn btn-down" href=""><span class="visually-hidden">По убыванию</span></a>
+            </li>
+            <li>
+              <a class="sort-btn btn-up" href=""><span class="visually-hidden">По возрастанию</span></a>
+            </li>
+          </ul>
+        </div>
+
+        <section class="catalog">
           <ul class="catalog-list">
             <li class="catalog-item">
                 <p>
@@ -220,14 +217,16 @@
               </div>
             </li>
           </ul>
-      </section>
+        </section>
 
-      <ul class="paginator">
-        <li><a class="page-btn page-active">1</a></li>
-        <li><a class="page-btn" href="blank.html">2</a></li>
-        <li><a class="page-btn" href="blank.html">3</a></li>
-        <li><a class="page-btn next-page-btn" href="blank.html">Следующая</a></li>
-      </ul>
+        <ul class="paginator">
+          <li><a class="page-btn page-active">1</a></li>
+          <li><a class="page-btn" href="blank.html">2</a></li>
+          <li><a class="page-btn" href="blank.html">3</a></li>
+          <li><a class="page-btn next-page-btn" href="blank.html">Следующая</a></li>
+        </ul>
+
+      </div>
 
     </main>
 
@@ -255,9 +254,10 @@
           <li><a class="social-btn btn-instagram" href="https://www.instagram.com/"><span class="visually-hidden">Инстаграм</span></a></li>
         </ul>
 
-      <div class="suggest">
-        <h2>Давайте дружить, это выгодно!</h2>
-        Скидка 10% для друзей из социальных сетей.
+        <div class="suggest">
+          <h2>Давайте дружить, это выгодно!</h2>
+          Скидка 10% для друзей из социальных сетей.
+        </div>
       </div>
 
     </footer>
