@@ -67,23 +67,6 @@ img {
   align-content: start;
 }
 
-/* Grid for pages */
-
-/*.page-catalog {
-  outline-offset: -5px;
-  outline: 5px solid rgba(255, 0, 0, 0.7);
-}
-
-.page-catalog .sort-menu {
-  outline-offset: -5px;
-  outline: 5px solid rgba(0, 255, 0, 0.7);
-}
-
-.page-catalog .filter {
-  outline-offset: -5px;
-  outline: 5px solid rgba(0, 0, 255, 0.7);
-}*/
-
 /* Стилизация index.html*/
 
 /*Шапка*/
@@ -180,7 +163,15 @@ img {
 .slaider-list {
   list-style: none;
   background-color: var(--basic-grey);
-  margin-top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.slaider-list-item {
+  display: flex;
+  position: relative;
+  min-height: 431px;
+  padding-bottom: 15px;
 }
 
 .slaider-list-item:first-child h2 {
@@ -192,7 +183,8 @@ img {
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
-}
+  width: 538px;
+  }
 
 .slaider-decription {
   color: var(--light-black)
@@ -215,6 +207,12 @@ img {
   color: var(--basic-white-opacity)
 }
 
+.slaider-list-item img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 /*преимущества*/
 
 .advantages {
@@ -235,6 +233,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 100px;
+  padding-bottom: 80px;
 }
 
 .advantages-item {
@@ -303,9 +302,20 @@ img {
   color: var(--basic-white-opacity);
 }
 
+/* Блок презентация */
+
 /* Блок презентация О нас */
 
+.presentation {
+  display: flex;
+  justify-content: space-between;
+  /*min-height: 525px;*/
+  border-top: 2px solid var(--basic-grey);
+  border-bottom: 2px solid var(--basic-grey);
+}
+
 .presentation-about-us {
+  margin-top: 73px;
   color: var(--light-black)
 }
 
@@ -323,6 +333,11 @@ img {
 }
 
 /*статистика презентации*/
+
+.presentation-statistics {
+  margin-top: 39px;
+  margin-bottom: 74px;
+}
 
 .presentation-statistics h3 {
   text-transform: uppercase;
@@ -348,7 +363,18 @@ th sup {
 /*Партнеры*/
 
 .partners {
+  margin: 0;
+  padding: 0;
   list-style: none;
+  border-bottom: 2px solid var(--basic-grey);
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.partners li {
+  padding-top: 52px;
+  padding-bottom: 44px;
 }
 
 .partner {
@@ -484,11 +510,37 @@ th sup {
 
 .sort-menu {
   grid-column: 1 / -1;
+  display: flex;
+}
+
+.price-title {
+  order: -1;
+  margin-right: 285px;
 }
 
 .list-sort-type,
 .list-sort-direction {
+  margin: 0;
+  padding: 0;
   list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.list-sort-type {
+  margin-left: 240px;
+}
+
+.list-sort-direction {
+  margin-left: 47px;
+}
+
+.list-sort-type li {
+  margin-right: 25px;
+}
+
+.list-sort-direction li:nth-child(2) {
+  margin-left: 18px;
 }
 
 .sort-menu h3{
@@ -652,7 +704,6 @@ th sup {
   width: 200px;
   padding-top: 17px;
   padding-bottom: 15px;
-  box-sizing: border-box;
 }
 
 .btn-price:hover {
@@ -664,7 +715,17 @@ th sup {
 }
 
 .paginator{
+  margin: 0;
+  padding: 0;
   list-style: none;
+  display: flex;
+  margin-left: 400px;
+  padding-top: 55px;
+  padding-bottom: 60px;
+}
+
+.paginator li {
+  margin-right: 11px;
 }
 
 .page-btn {
@@ -677,8 +738,10 @@ th sup {
   background: var(--basic-grey);
   border-radius: 3px;
   width: 50px;
+  height: 50px;
   padding-top: 17px;
   padding-bottom: 15px;
+  box-sizing: border-box;
 }
 
 .next-page-btn {
@@ -687,8 +750,10 @@ th sup {
 
 .page-active {
   border: 3px solid #DBDBDB;
-  box-sizing: border-box;
   background-color: var(--active-paginator);
+  padding-top: 14px;
+  padding-bottom: 12px;
+  cursor: default;
 }
 
 .page-btn:hover,
