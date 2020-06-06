@@ -45,7 +45,7 @@
               </label>
           </fieldset>
           <fieldset class="grid-type">
-            <legend><h3>Сетка:</h3></legend>
+            <h3>Сетка:</h3></legend>
             <ul class="grid-list">
               <li class="grid-item">
                 <label>
@@ -127,24 +127,20 @@
         <section class="catalog">
           <ul class="catalog-list">
             <li class="catalog-item">
-                <p>
-                  <img src="img/sedona.jpg" width="358" alt="Шаблон сайта Sedona">
-                </p>
-                <div class="catalog-card">
+                <img src="img/sedona.jpg" width="360" alt="Шаблон сайта Sedona">
+                <div class="catalog-card ">
                   <h3><a class="link-name" href="blank.html">Sedona</a></h3>
-                  <p class="description">
+                  <div class="description">
                     Информационный сайт<br>
                     для туристов
-                  </p>
+                  </div>
                   <p>
                     <a class="btn btn-price" href="blank.html">9900 Р</a>
                   </p>
                 </div>
             </li>
             <li class="catalog-item">
-                <p>
-                  <img src="img/pink.jpg" width="358" alt="Шаблон сайта Pink">
-                </p>
+                <img src="img/pink.jpg" width="360" alt="Шаблон сайта Pink">
                 <div class="catalog-card">
                   <h3><a class="link-name" href="blank.html">Pink App</a></h3>
                   <p class="description">
@@ -157,9 +153,7 @@
                 </div>
             </li>
             <li class="catalog-item">
-              <p>
-                <img src="img/barbershop.jpg" width="358" alt="Шаблон сайта Барбершоп">
-              </p>
+              <img src="img/barbershop.jpg" width="360" alt="Шаблон сайта Барбершоп">
               <div class="catalog-card">
                 <h3><a class="link-name" href="blank.html">Barbershop</a></h3>
                 <p class="description">
@@ -172,9 +166,7 @@
               </div>
             </li>
             <li class="catalog-item">
-              <p>
-                <img src="img/mishka-1.jpg" width="358" alt="Шаблон сайта Mishka">
-              </p>
+              <img src="img/mishka-1.jpg" width="360" alt="Шаблон сайта Mishka">
               <div class="catalog-card">
                 <h3><a class="link-name" href="blank.html">Mishka</a></h3>
                 <p class="description">
@@ -187,9 +179,7 @@
               </div>
             </li>
             <li class="catalog-item">
-              <p>
-                <img src="img/a-plus.jpg" width="358" alt="Шаблон сайта A-plus">
-              </p>
+              <img src="img/a-plus.jpg" width="360" alt="Шаблон сайта A-plus">
               <div class="catalog-card">
                 <h3><a class="link-name" href="blank.html">A Plus</a></h3>
                 <p class="description">
@@ -202,9 +192,7 @@
               </div>
             </li>
             <li class="catalog-item">
-              <p>
-                <img src="img/kvast.jpg" width="358" alt="Шаблон сайта Кваст">
-              </p>
+              <img src="img/kvast.jpg" width="360" alt="Шаблон сайта Кваст">
               <div class="catalog-card">
                 <h3><a class="link-name" href="blank.html">Кваст</a></h3>
                 <p class="description">
@@ -262,22 +250,25 @@
 
     </footer>
 
-    <section class="popap">
+    <section class="popap popap-catalog">
       <h2>Напишите нам</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
         <p>
-          <label for="name" >Ваше имя</label>
-          <input type="text" name="name" id="name" placeholder="Имя Фамилия:">
-          <label for="email">Ваш email:</label>
+          <label for="name" >Ваше имя:</label><br>
+          <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="email">Ваш email:</label><br>
           <input type="email" name="email" id="email" placeholder="email@example.com">
         </p>
         <p>
-          <label for="text">Текст письма:</label><br>
-          <textarea id="text" name="text" placeholder="В свободной форме" rows="5"></textarea>
+        <label for="text">Текст письма:</label><br>
+        <textarea id="text" name="text" placeholder="В свободной форме" rows="5"></textarea>
         </p>
         <button type="submit">Отправить</button>
+        <button type="button"><span class="visually-hidden">Закрыть</span></button>
       </form>
-      <button type="button">Закрыть</button>
+
     </section>
 
   </body>

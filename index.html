@@ -44,7 +44,7 @@
             </p>
             <a class="btn slaider-btn" href="blank.html">Узнать больше</a>
           </div>
-          <img src="img/nerds-index-slide1-1.png" width="760" alt="Смартфоны">
+          <img class="slaider-img" src="img/nerds-index-slide1-1.png" width="760" alt="Смартфоны">
         </li>
         <li class="slaider-list-item container">
           <div class="slaid-info">
@@ -58,7 +58,7 @@
             </p>
             <a class="btn slaider-btn" href="blank.html">Узнать больше</a>
           </div>
-          <img src="img/nerds-index-slide2-1.png" width="760" alt="Моноблоки">
+          <img class="slaider-img" src="img/nerds-index-slide2-1.png" width="760" alt="Моноблоки">
         </li>
         <li class="slaider-list-item container">
           <div class="slaid-info">
@@ -72,7 +72,7 @@
             </p>
             <a class="btn slaider-btn" href="blank.html">Узнать больше</a>
           </div>
-          <img src="img/nerds-index-slide3-1.png" width="760" alt="Планшет и смартфон">
+          <img class="slaider-img" src="img/nerds-index-slide3-1.png" width="760" alt="Планшет и смартфон">
         </li>
       </ul>
 
@@ -207,18 +207,21 @@
       <h2>Напишите нам</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
         <p>
-          <label for="name" >Ваше имя</label>
-          <input type="text" name="name" id="name" placeholder="Имя Фамилия:">
-          <label for="email">Ваш email:</label>
+          <label for="name" >Ваше имя:</label><br>
+          <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="email">Ваш email:</label><br>
           <input type="email" name="email" id="email" placeholder="email@example.com">
         </p>
         <p>
-          <label for="text">Текст письма:</label><br>
-          <textarea id="text" name="text" placeholder="В свободной форме" rows="5"></textarea>
+        <label for="text">Текст письма:</label><br>
+        <textarea id="text" name="text" placeholder="В свободной форме" rows="5"></textarea>
         </p>
         <button type="submit">Отправить</button>
+        <button type="button"><span class="visually-hidden">Закрыть</span></button>
       </form>
-      <button type="button">Закрыть</button>
+
     </section>
 
   </body>
