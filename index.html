@@ -23,58 +23,63 @@
           <div class="basket-container">
               <a class="basket" href="blank.html">Корзина</a>
           </div>
-
         </nav>
       </div>
       <h1 class="visually-hidden">Магазин готовых шаблонов</h1> <!-- Заголовок который будет скрытым -->
     </header>
 
     <main>
-
-      <ul class="slaider-list">
-        <li class="slaider-list-item container">
-          <div class="slaid-info">
-            <h2>
-              Долго, дорого,<br>
-              скрупулезно.
-            </h2>
-            <p class="sliader-decription">
-              Математически выверенный дизайн<br>
-              для вашего сайта или мобильного приложения.
-            </p>
-            <a class="btn slaider-btn" href="blank.html">Узнать больше</a>
-          </div>
-          <img class="slaider-img" src="img/nerds-index-slide1-1.png" width="760" alt="Смартфоны">
-        </li>
-        <li class="slaider-list-item container">
-          <div class="slaid-info">
-            <h2>
-              Любим математику<br>
-              как никто другой
-            </h2>
-            <p class="slaider-decription">
-              Никакого креатива, только математические формулы<br>
-              для расчета идеальных пропорций
-            </p>
-            <a class="btn slaider-btn" href="blank.html">Узнать больше</a>
-          </div>
-          <img class="slaider-img" src="img/nerds-index-slide2-1.png" width="760" alt="Моноблоки">
-        </li>
-        <li class="slaider-list-item container">
-          <div class="slaid-info">
-            <h2>
-              Только ночь,<br>
-              только хардкор
-            </h2>
-            <p class="slaider-decription">
-              Работать днем, как все? Мы против этого.<br>
-              Ближе к полуночи работа только начинается.
-            </p>
-            <a class="btn slaider-btn" href="blank.html">Узнать больше</a>
-          </div>
-          <img class="slaider-img" src="img/nerds-index-slide3-1.png" width="760" alt="Планшет и смартфон">
-        </li>
-      </ul>
+      <div class="slaid-wrapper">
+        <ul class="slaider-list">
+          <li class="slaider-list-item slide container slide-current">
+            <div class="slaid-info">
+              <h2>
+                Долго, дорого,<br>
+                скрупулезно.
+              </h2>
+              <p class="sliader-decription">
+                Математически выверенный дизайн<br>
+                для вашего сайта или мобильного приложения.
+              </p>
+              <a class="btn slaider-btn" href="blank.html">Узнать больше</a>
+            </div>
+            <img class="slaider-img" src="img/nerds-index-slide1-1.png" width="760" alt="Смартфоны">
+          </li>
+          <li class="slaider-list-item slide container ">
+            <div class="slaid-info">
+              <h2>
+                Любим математику<br>
+                как никто другой
+              </h2>
+              <p class="slaider-decription">
+                Никакого креатива, только математические формулы<br>
+                для расчета идеальных пропорций
+              </p>
+              <a class="btn slaider-btn" href="blank.html">Узнать больше</a>
+            </div>
+            <img class="slaider-img" src="img/nerds-index-slide2-1.png" width="760" alt="Моноблоки">
+          </li>
+          <li class="slaider-list-item slide container">
+            <div class="slaid-info">
+              <h2>
+                Только ночь,<br>
+                только хардкор
+              </h2>
+              <p class="slaider-decription">
+                Работать днем, как все? Мы против этого.<br>
+                Ближе к полуночи работа только начинается.
+              </p>
+              <a class="btn slaider-btn" href="blank.html">Узнать больше</a>
+            </div>
+            <img class="slaider-img" src="img/nerds-index-slide3-1.png" width="760" alt="Планшет и смартфон">
+          </li>
+        </ul>
+        <div class="slider-controls">
+          <button type="button" aria-label="Первый слайд"><div class="current"></div></button>
+          <button type="button" aria-label="Второй слайд"></button>
+          <button type="button" aria-label="Третий слайд"></button>
+        </div>
+      </div>
 
 
       <section class="advantages">
@@ -123,7 +128,7 @@
             превыше креатива. Работаем не покладая рук, как роботы.
           </p>
           <h3>Выполняем заказы на разработку:</h3>
-          <ul>
+          <ul class="presentation-about-us-list">
             <li>Веб-сайтов любой сложности</li>
             <li>Мобильных приложений для iOS и Android</li>
             <li>Слайдшоу и видео для корпоративных презентаций</li>
@@ -216,10 +221,10 @@
         </p>
         <p>
         <label for="text">Текст письма:</label><br>
-        <textarea id="text" name="text" placeholder="В свободной форме" rows="5"></textarea>
+        <textarea id="text" name="text" placeholder="В свободной форме" rows="4"></textarea>
         </p>
         <button type="submit">Отправить</button>
-        <button type="button"><span class="visually-hidden">Закрыть</span></button>
+        <button type="button" aria-label="Закрыть"></button>
       </form>
 
     </section>

@@ -34,16 +34,24 @@
         <form action="https://echo.htmlacademy.ru" method="GET" oninput="">
           <fieldset class="filter-price">
             <legend><h3>Стоимость:</h3></legend>
-            <input type="range" name="price" step="100" min="0" max="15000" value="9000">
-              <label>
-                <br>От
-                <input type="text" name="min" value="0">
-              </label>
-              <label>
-                До
-                <input type="text" name="max" value="15000">
-              </label>
-          </fieldset>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0"></div>
+                <div class="toggle toggle-max" tabindex="0"></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">
+                  от <input type="number" name="min-price" value="0">
+                </label>
+                <label class="max-price">
+                  до <input type="number" name="max-price" value="15000">
+                </label>
+              </div>
+            </div>
+
           <fieldset class="grid-type">
             <h3>Сетка:</h3></legend>
             <ul class="grid-list">
@@ -127,7 +135,9 @@
         <section class="catalog">
           <ul class="catalog-list">
             <li class="catalog-item">
-                <img src="img/sedona.jpg" width="360" alt="Шаблон сайта Sedona">
+                <div class="window">
+                  <img src="img/sedona.jpg" width="360" alt="Шаблон сайта Sedona">
+                </div>
                 <div class="catalog-card ">
                   <h3><a class="link-name" href="blank.html">Sedona</a></h3>
                   <div class="description">
@@ -140,7 +150,9 @@
                 </div>
             </li>
             <li class="catalog-item">
-                <img src="img/pink.jpg" width="360" alt="Шаблон сайта Pink">
+                <div class="window">
+                  <img src="img/pink.jpg" width="360" alt="Шаблон сайта Pink">
+                </div>
                 <div class="catalog-card">
                   <h3><a class="link-name" href="blank.html">Pink App</a></h3>
                   <p class="description">
@@ -153,7 +165,9 @@
                 </div>
             </li>
             <li class="catalog-item">
-              <img src="img/barbershop.jpg" width="360" alt="Шаблон сайта Барбершоп">
+              <div class="window">
+                <img src="img/barbershop.jpg" width="360" alt="Шаблон сайта Барбершоп">
+              </div>
               <div class="catalog-card">
                 <h3><a class="link-name" href="blank.html">Barbershop</a></h3>
                 <p class="description">
@@ -166,7 +180,9 @@
               </div>
             </li>
             <li class="catalog-item">
-              <img src="img/mishka-1.jpg" width="360" alt="Шаблон сайта Mishka">
+              <div class="window">
+                <img src="img/mishka-1.jpg" width="360" alt="Шаблон сайта Mishka">
+              </div>
               <div class="catalog-card">
                 <h3><a class="link-name" href="blank.html">Mishka</a></h3>
                 <p class="description">
@@ -179,7 +195,9 @@
               </div>
             </li>
             <li class="catalog-item">
-              <img src="img/a-plus.jpg" width="360" alt="Шаблон сайта A-plus">
+              <div class="window">
+                <img src="img/a-plus.jpg" width="360" alt="Шаблон сайта A-plus">
+              </div>
               <div class="catalog-card">
                 <h3><a class="link-name" href="blank.html">A Plus</a></h3>
                 <p class="description">
@@ -192,7 +210,9 @@
               </div>
             </li>
             <li class="catalog-item">
-              <img src="img/kvast.jpg" width="360" alt="Шаблон сайта Кваст">
+              <div class="window">
+                <img src="img/kvast.jpg" width="360" alt="Шаблон сайта Кваст">
+              </div>
               <div class="catalog-card">
                 <h3><a class="link-name" href="blank.html">Кваст</a></h3>
                 <p class="description">
