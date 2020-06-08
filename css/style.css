@@ -617,7 +617,7 @@ th sup {
 /* попап*/
 
 .popap{
-  /*display: none;*/
+  display: none;
   width: 960px;
   min-height: 590px;
   background: var(--basic-white);
