@@ -398,9 +398,9 @@ img {
 
 .presentation {
   display: flex;
-  justify-content: space-between;
   border-top: 2px solid var(--basic-grey);
   border-bottom: 2px solid var(--basic-grey);
+  justify-content: space-between;
 }
 
 .presentation-about-us {
@@ -421,40 +421,86 @@ img {
   line-height: 24px;
   text-transform: uppercase;
   margin-top: 40px;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
 }
 
 .presentation-about-us-list {
+  list-style: none;
   margin-bottom: 74px;
+  padding: 0;
+  margin: 0;
 }
 
 .presentation-about-us-list  li{
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  position: relative;
+  margin-left: 36px;
+}
+
+.presentation-about-us-list li:last-child {
+  margin-bottom: 0;
+}
+
+.presentation-about-us-list li::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: var(--basic-red);
+  left: -37px;
+  top: 11px;
 }
 
 /*статистика презентации*/
 
 .presentation-statistics {
-  margin-top: 39px;
-  margin-bottom: 74px;
+  margin-top: 25px;
+  margin-bottom: 68px;
+}
+
+.presentation-statistics p {
+  margin-left: 1px;
 }
 
 .presentation-statistics h3 {
   text-transform: uppercase;
   font-size: 16px;
-  margin-top: 21px;
-  margin-bottom: 31px;
+  margin-top: 30px;
+  margin-bottom: 21px;
+  margin-left: 17px;
+}
+
+.presentation-statistics table {
+  border-spacing: 0 8px;
+  margin-left: -1px;
 }
 
 .presentation-statistics th {
   font-weight: bold;
   font-size: 45px;
   line-height: 64px;
+  margin-top: 10px;
+}
+
+
+.presentation-statistics th:nth-child(2){
+  padding-left: 20px;
+}
+
+.presentation-statistics th:nth-child(3){
+  padding-left: 20px;
+  text-align: left;
+}
+
+.presentation-statistics td:nth-child(2),
+.presentation-statistics td:nth-child(3){
+  padding-left: 22px;
 }
 
 th sup {
   font-size: 26px;
   line-height: 40px;
+  top: -15px;
 }
 
 .presentation-statistics td {
@@ -471,23 +517,71 @@ th sup {
   border-bottom: 2px solid var(--basic-grey);
   margin-bottom: 80px;
   display: flex;
-  justify-content: space-around;
+  /*justify-content: space-between;*/
+  padding-left: 31px;
 }
 
 .partners li {
-  padding-top: 52px;
-  padding-bottom: 20px;
+  margin-top: 45px;
+  padding-bottom: 35px;
   position: relative;
+}
+
+.partners li:not(:first-child) {
+  margin-left: 94px;
+}
+
+.partners li:first-child{
+  margin-top: 62px;
+}
+
+.partners li:nth-child(3) {
+  margin-top: 63px;
+  margin-left: 104px;
+}
+
+.partners li:nth-child(4) {
+  margin-top: 52px;
+  margin-left: 120px;
 }
 
 .partner {
   opacity: 0.2;
 }
 
+.partners li:nth-child(1) img {
+  width: 199px;
+  min-height: 67.82px;
+}
+
+.partners li:nth-child(2) img {
+  width: 209px;
+  min-height: 90px;
+}
+
+.partners li:nth-child(3) img {
+  width: 185px;
+  min-height: 52px;
+}
+
+.partners li:nth-child(4) img {
+  width: 173px;
+  min-height: 84px;
+}
+
 .partners li::after {
   position: absolute;
   content: url("../img/border-logo.png");
   left: 248px;
+}
+
+.partners li:nth-child(2)::after {
+  left: 255px;
+  top: 18px;
+}
+
+.partners li:nth-child(3)::after {
+  left: 241px;
 }
 
 .partners li:last-child::after {
@@ -504,18 +598,21 @@ th sup {
 
 /* Футер*/
 
-.map{
+.map {
   display: flex;
   background-image: url("../img/map1.png");
   width: 1440px;
   min-height: 416px;
 }
 
-.contacts h3{
+.contacts h3 {
   margin-top: 0;
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 0;
 }
 
-.contacts{
+.contacts {
   background-color: var(--basic-white);
   margin-top: 54px;
   margin-bottom: 54px;
@@ -523,6 +620,15 @@ th sup {
   padding-top: 49px;
   padding-left: 50px;
   padding-right: 50px;
+}
+
+.contacts p {
+  line-height: 18px;
+}
+
+.contacts p:nth-child(2) {
+  margin-top: 22px;
+  margin-bottom: 20px;
 }
 
 .contacts p:nth-child(3) {
@@ -771,19 +877,27 @@ th sup {
 }
 
 .list-sort-type {
-  margin-left: 240px;
+  margin-left: 265px;
 }
 
 .list-sort-direction {
-  margin-left: 47px;
+  /*margin-left: 47px;*/
 }
 
 .list-sort-type li {
   margin-right: 25px;
 }
 
+.list-sort-direction {
+  margin-left: 24px;
+}
+
 .list-sort-direction li:nth-child(2) {
-  margin-left: 18px;
+  margin-left: 19px;
+}
+
+.list-sort-direction li:nth-child(3) {
+  margin-right: 0;
 }
 
 .sort-menu h3{
@@ -833,8 +947,28 @@ th sup {
   margin-bottom: 21px;
 }
 
-.grid-item input[type="radio"] {
-  margin-right: 16px;
+.grid-item label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  margin-left: 35px;
+}
+
+.filter-input-radio + label::before {
+  content: url("../img/radio-off.svg");
+  position: absolute;
+  left: -36px;
+  top: -3px;
+  opacity: 0.4;
+}
+
+.filter-input-radio:checked + label::before {
+  content: url("../img/radio-on.svg");
+  position: absolute;
+  left: -36px;
+  top: -3px;
+  opacity: 0.4;
 }
 
 .grid-type h3{
@@ -850,8 +984,32 @@ th sup {
   margin-bottom: 21px;
 }
 
-.feature-item input[type="checkbox"] {
-  margin-right: 16px;
+.feature-item label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  margin-left: 35px;
+}
+
+.filter-input-checkbox + label::before {
+  content: url("../img/checkbox-off.svg");
+  position: absolute;
+  left: -36px;
+  top: -3px;
+  opacity: 0.4;
+}
+
+.filter-input-checkbox:checked + label::before {
+  content: url("../img/checkbox-on.svg");
+  position: absolute;
+  left: -36px;
+  top: -3px;
+  opacity: 0.4;
+}
+
+label::before:hover{
+  opacity: 1;
 }
 
 .filter h3 {
@@ -935,7 +1093,8 @@ th sup {
 
 .price-controls input {
   width: 60px;
-  padding: 10px;
+  padding: 11px;
+  padding-left: 9px;
   margin-left: 10px;
   text-align: center;
   color: var(--light-black);
@@ -948,6 +1107,7 @@ th sup {
 
 .grid-type,
 .filter-features {
+  margin-left: 0;
   line-height: 19px;
   color: var(--light-black);
 }
@@ -1149,8 +1309,9 @@ th sup {
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   color: var(--black-opacity-low);
 }
-
+/*
 .popap-catalog {
   position: absolute;
   top: 2350px;
 }
+*/

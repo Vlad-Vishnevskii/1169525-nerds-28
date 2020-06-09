@@ -44,10 +44,10 @@
               </div>
               <div class="price-controls">
                 <label class="min-price">
-                  от <input type="number" name="min-price" value="0">
+                  от <input type="text" name="min-price" value="0">
                 </label>
                 <label class="max-price">
-                  до <input type="number" name="max-price" value="15000">
+                  до <input type="text" name="max-price" value="15 000">
                 </label>
               </div>
             </div>
@@ -56,21 +56,21 @@
             <h3>Сетка:</h3></legend>
             <ul class="grid-list">
               <li class="grid-item">
-                <label>
-                <input type="radio" name="filter-grid" value="adaptive" checked>
-                Адаптивная
+                <input class="visually-hidden filter-input-radio" type="radio" name="filter-grid" value="adaptive" id="adaptive" checked>
+                <label for="adaptive">
+                  Адаптивная
                 </label>
               </li>
               <li class="grid-item">
-                <label>
-                <input type="radio" name="filter-grid" value="fixed">
-                Фиксированная
+                <input class="visually-hidden filter-input-radio" type="radio" name="filter-grid" value="fixed" id="fixed">
+                <label for="fixed">
+                  Фиксированная
                 </label>
               </li>
               <li class="grid-item">
-                <label>
-                <input type="radio" name="filter-grid" value="rubber">
-                Резиновая
+                <input class="visually-hidden filter-input-radio" type="radio" name="filter-grid" value="rubber" id="rubber">
+                <label for="rubber">
+                  Резиновая
                 </label>
               </li>
             </ul>
@@ -79,33 +79,33 @@
             <legend><h3>Особенности:</h3></legend>
             <ul class="features">
               <li class="feature-item">
-                <label>
-                <input type="checkbox" name="slaider" checked>
-                Слайдер
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="slaider" id="slaider" checked>
+                <label for="slaider">
+                  Слайдер
                 </label>
               </li>
               <li class="feature-item">
-                <label>
-                <input type="checkbox" name="features-block">
-                Блок преимуществ
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="features-block" id="features-block">
+                <label for="features-block">
+                  Блок преимуществ
                 </label>
               </li>
               <li class="feature-item">
-                <label>
-                <input type="checkbox" name="news" checked>
-                Новости
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="news" id="news" checked>
+                <label for="news">
+                  Новости
                 </label>
               </li>
               <li class="feature-item">
-                <label>
-                <input type="checkbox" name="galery">
-                Галерея
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="galery" id="galery">
+                <label for="galery">
+                  Галерея
                 </label>
               </li>
               <li class="feature-item">
-                <label>
-                <input type="checkbox" name="basket">
-                Корзина
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="basket" id="basket">
+                <label for="basket">
+                  Корзина
                 </label>
               </li>
             </ul>
