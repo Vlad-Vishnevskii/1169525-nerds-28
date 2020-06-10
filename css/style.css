@@ -28,7 +28,6 @@
 }
 
 body {
-  width: 1440px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", Arial, sans-serif;
@@ -60,11 +59,7 @@ img {
   margin: 0 auto;
 }
 
-.container-main {
-  width: 1169px;
-  margin: 0 auto;
-}
-
+*/
 /*grid*/
 .page{
   height: 100%;
@@ -97,12 +92,6 @@ img {
 .main-header {
   background-color: var(--basic-grey);
   padding-top: 48.98px;
-}
-
-.index-page {
-  margin-top: 15px;
-  margin-left: 9px;
-  padding-top: 33.98px;
 }
 
 .main-navigation {
@@ -214,7 +203,6 @@ img {
 
 .slaid-wrapper {
   position: relative;
-  margin-left: 9px;
 }
 
 .slaider-list {
@@ -222,8 +210,8 @@ img {
   background-color: var(--basic-grey);
   margin: 0;
   padding: 0;
-  min-height: 431px;
-  padding-bottom: 7px;
+  min-height: 424px;
+  /*padding-bottom: 7px;*/
 }
 
 .slaider-img {
@@ -277,13 +265,13 @@ img {
 .slaider-list-item img {
   position: absolute;
   top: -6px;
-  right: 11px;
+  right: 2px;
 }
 
 .slider-controls {
   position: absolute;
   top: 310px;
-  left: 667px;
+  left: 676px;
   z-index: 20;
   display: flex;
   width: 88px;
@@ -304,6 +292,7 @@ img {
 }
 
 .slider-controls .current {
+  display: block;
   width: 8px;
   height: 8px;
   background: transparent;
@@ -325,7 +314,7 @@ img {
 /*преимущества*/
 
 .advantages {
-  padding-top: 65px;
+  padding-top: 80px;
 }
 
 .advantages-item h3 {
