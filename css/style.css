@@ -24,6 +24,7 @@
   --toggle-grey: #ABABAB;
   --border-catalog: rgba(0, 0, 0, 0.1);
   --form-border: #D7DCDE;
+  --grey-logo: #A6A6A6;
 }
 
 body {
@@ -59,6 +60,11 @@ img {
   margin: 0 auto;
 }
 
+.container-main {
+  width: 1169px;
+  margin: 0 auto;
+}
+
 /*grid*/
 .page{
   height: 100%;
@@ -91,6 +97,12 @@ img {
 .main-header {
   background-color: var(--basic-grey);
   padding-top: 48.98px;
+}
+
+.index-page {
+  margin-top: 15px;
+  margin-left: 9px;
+  padding-top: 33.98px;
 }
 
 .main-navigation {
@@ -147,8 +159,12 @@ img {
   text-transform: uppercase;
 }
 
-.main-header-logo:active {
-  opacity: 0.2;
+.main-header-logo svg:hover {
+  fill: var(--basic-black);
+}
+
+.main-header-logo svg:active {
+  fill: var(--grey-logo);
 }
 
 .navigation a:hover,
@@ -182,10 +198,22 @@ img {
   left: -40px;
 }
 
+.basket-menu-active::before {
+  content: "";
+  width: 115px;
+  height: 2px;
+  background-color: var(--basic-red);
+  position: absolute;
+  z-index: 15;
+  top: 118px;
+  right: 93px;
+}
+
 /*Слайдер*/
 
 .slaid-wrapper {
   position: relative;
+  margin-left: 9px;
 }
 
 .slaider-list {
@@ -248,13 +276,13 @@ img {
 .slaider-list-item img {
   position: absolute;
   top: -6px;
-  right: 2px;
+  right: 11px;
 }
 
 .slider-controls {
   position: absolute;
   top: 310px;
-  left: 676px;
+  left: 667px;
   z-index: 20;
   display: flex;
   width: 88px;
@@ -680,24 +708,34 @@ th sup {
   border-radius: 50%;
 }
 
-.btn-vk::before {
-  content: url("../img/vk-icon.svg");
+.btn-vk svg {
   margin: 33px 27px;
 }
 
-.btn-facebook::before {
-  content: url("../img/fb-icon.svg");
+.btn-facebook svg {
   margin-top: 31px;
   margin-right: 34px;
   margin-bottom: 28px;
   margin-left: 35px;
 }
 
-.btn-instagram::before {
-  content: url("../img/insta-icon.svg");
+.btn-instagram svg {
   margin: 30px;
 }
 
+.btn-vk svg:active {
+  opacity: 0.3;
+}
+
+.btn-facebook svg:active {
+  opacity: 0.3;
+}
+
+.btn-instagram svg:active {
+  opacity: 0.3;
+}
+
+*/
 .suggest {
   color: var(--lighter-black);
   line-height: 22px;
@@ -971,6 +1009,14 @@ th sup {
   opacity: 0.4;
 }
 
+.filter-input-radio:hover + label::before {
+  opacity: 1;
+}
+
+.filter-input-radio:active + label::before {
+  opacity: 0.1;
+}
+
 .grid-type h3{
   margin-top: 0;
   margin-bottom: 16px;
@@ -1008,8 +1054,12 @@ th sup {
   opacity: 0.4;
 }
 
-label::before:hover{
+.filter-input-checkbox:hover + label::before {
   opacity: 1;
+}
+
+.filter-input-checkbox:active + label::before {
+  opacity: 0.1;
 }
 
 .filter h3 {
@@ -1167,51 +1217,59 @@ label::before:hover{
 }
 
 .catalog-item {
-  /*box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);*/
-  border-bottom-radius: 5px;
-  width: 360px;
   position: relative;
-  margin-bottom: 26px;
+  margin-bottom: 30px;
   display: flex;
 }
 
-.catalog-item:nth-child(3),
-.catalog-item:nth-child(4) {
-  margin-bottom: 30px;
-}
-
-
-.catalog-item img {
-  border: 1px solid var(--border-catalog);
-  box-sizing: border-box;
+.catalog-item:hover {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);
 }
 
 .window {
   display: flex;
   flex-direction: column;
+  border: 1px solid var(--border-catalog);
+  box-sizing: border-box;
+  min-height: 578px;
+  border-radius: 5px;
 }
 
-.window::before{
-  content: url("../img/browser.svg");
-  height: 40px;
+.window svg{
+  width: 360px;
+  min-height: 40px;
   opacity: 0.12;
 }
 
+.window img {
+  height: 578px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+
 .catalog-card {
   position: absolute;
-  z-index: 5;
+  z-index: 10;
+  left: 1px;
   bottom: 0;
   display: none;
-  background-color: var(--basic-grey);
+  background-color:  var(--basic-grey);
   text-align: center;
   width: 360px;
   min-height: 231px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
-.catalog-item:nth-child(2) .catalog-card {
+.catalog-item:hover .catalog-card  {
   display: block;
+}
+
+.catalog-item:hover svg {
+  opacity: 1;
 }
 
 .link-name {
@@ -1261,8 +1319,8 @@ label::before:hover{
   padding: 0;
   list-style: none;
   display: flex;
-  padding-top: 28px;
-  padding-bottom: 60px;
+  padding-top: 26px;
+  padding-bottom: 58px;
 }
 
 .paginator li {
