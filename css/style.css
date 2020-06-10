@@ -185,6 +185,7 @@ img {
 
 .basket-container{
   display: flex;
+  position: relative;
 }
 
 .basket {
@@ -198,15 +199,15 @@ img {
   left: -40px;
 }
 
-.basket-menu-active::before {
+.basket-menu-active::after {
   content: "";
   width: 115px;
   height: 2px;
   background-color: var(--basic-red);
   position: absolute;
   z-index: 15;
-  top: 118px;
-  right: 93px;
+  top: 38px;
+  right: 0px;
 }
 
 /*Слайдер*/
