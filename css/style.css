@@ -59,6 +59,11 @@ img {
   margin: 0 auto;
 }
 
+.large-container {
+  width: 1440px;
+  margin: 0 auto;
+}
+
 */
 /*grid*/
 .page{
