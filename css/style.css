@@ -54,6 +54,10 @@ img {
   margin: -1px;
 }
 
+.stretch-container {
+  width: 100%;
+}
+
 .container {
   width: 1160px;
   margin: 0 auto;
@@ -64,8 +68,8 @@ img {
   margin: 0 auto;
 }
 
-*/
 /*grid*/
+
 .page{
   height: 100%;
 }
@@ -85,7 +89,7 @@ img {
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
-  margin-left: 348px;
+  margin-left: 209px;
   margin-bottom: 108px;
   margin-top: 71px;
 }
@@ -107,7 +111,7 @@ img {
   margin-right: 202px;
 }
 
-.main-header-logo img{
+.main-header-logo img {
   max-width: 160px;
 }
 
@@ -138,7 +142,7 @@ img {
   margin-right: 46px;
 }
 
-.navigation li:nth-last-child() {
+.navigation li:nth-last-child {
   margin-top: 28px;
   margin-right: 0;
 }
@@ -172,12 +176,12 @@ img {
   opacity: 0.3;
 }
 
-.menu-active{
+.menu-active {
   padding-bottom: 18px;
   border-bottom: 2px solid var(--basic-red);
 }
 
-.basket-container{
+.basket-container {
   display: flex;
   position: relative;
 }
@@ -207,16 +211,18 @@ img {
 /*Слайдер*/
 
 .slaid-wrapper {
-  position: relative;
+  background-color: var(--basic-grey);
 }
 
 .slaider-list {
   list-style: none;
-  background-color: var(--basic-grey);
   margin: 0;
   padding: 0;
   min-height: 424px;
-  /*padding-bottom: 7px;*/
+}
+
+.slaider-list-wrapper {
+  position: relative;
 }
 
 .slaider-img {
@@ -276,7 +282,7 @@ img {
 .slider-controls {
   position: absolute;
   top: 310px;
-  left: 676px;
+  left: 536px;
   z-index: 20;
   display: flex;
   width: 88px;
@@ -454,7 +460,7 @@ img {
   margin: 0;
 }
 
-.presentation-about-us-list  li{
+.presentation-about-us-list  li {
   margin-bottom: 24px;
   position: relative;
   margin-left: 36px;
@@ -506,17 +512,17 @@ img {
 }
 
 
-.presentation-statistics th:nth-child(2){
+.presentation-statistics th:nth-child(2) {
   padding-left: 20px;
 }
 
-.presentation-statistics th:nth-child(3){
+.presentation-statistics th:nth-child(3) {
   padding-left: 20px;
   text-align: left;
 }
 
 .presentation-statistics td:nth-child(2),
-.presentation-statistics td:nth-child(3){
+.presentation-statistics td:nth-child(3) {
   padding-left: 22px;
 }
 
@@ -554,7 +560,7 @@ th sup {
   margin-left: 94px;
 }
 
-.partners li:first-child{
+.partners li:first-child {
   margin-top: 62px;
 }
 
@@ -615,7 +621,7 @@ th sup {
   opacity: 1;
 }
 
-.partner:active{
+.partner:active {
   opacity: 0.1;
 }
 
@@ -658,7 +664,7 @@ th sup {
   margin-bottom: 37.29px;
 }
 
-.btn-write{
+.btn-write {
   background-color: var(--basic-red);
   padding-top: 17px;
   padding-bottom: 15px;
@@ -666,11 +672,11 @@ th sup {
   padding-right: 44px;
 }
 
-.btn-write:hover{
+.btn-write:hover {
   background-color: var(--red-dark);
 }
 
-.btn-write:active{
+.btn-write:active {
   background-color: var(--red-extra-dark);
   color: var(--basic-white-opacity);
 }
@@ -691,11 +697,11 @@ th sup {
   margin-right: 130px;
 }
 
-.social-list li{
+.social-list li {
   margin-right: 9px;
 }
 
-.social-btn{
+.social-btn {
   display: flex;
   background-color: var(--social-btn-grey);
   width: 81px;
@@ -755,7 +761,7 @@ th sup {
 
 /* попап*/
 
-.popap{
+.popap {
   display: none;
   width: 960px;
   min-height: 590px;
@@ -849,7 +855,7 @@ th sup {
   padding: 16px;
 }
 
-.popap button[type="button"]{
+.popap button[type="button"] {
   position: absolute;
   top: -50px;
   right: -15px;
@@ -859,7 +865,7 @@ th sup {
   opacity: 0.3;
 }
 
-.popap button[type="button"]::after{
+.popap button[type="button"]::after {
   content: url("../img/close-cross.svg");
   cursor: pointer;
 }
@@ -911,10 +917,6 @@ th sup {
 
 .list-sort-type {
   margin-left: 265px;
-}
-
-.list-sort-direction {
-  /*margin-left: 47px;*/
 }
 
 .list-sort-type li {
@@ -1012,7 +1014,7 @@ th sup {
   opacity: 0.1;
 }
 
-.grid-type h3{
+.grid-type h3 {
   margin-top: 0;
   margin-bottom: 16px;
 }
@@ -1069,7 +1071,7 @@ th sup {
   padding: 0;
 }
 
-.filter-price h3{
+.filter-price h3 {
   margin-bottom: 48px;
 }
 
@@ -1232,7 +1234,7 @@ th sup {
   border-radius: 5px;
 }
 
-.window svg{
+.window svg {
   width: 360px;
   min-height: 40px;
   opacity: 0.12;
@@ -1257,6 +1259,7 @@ th sup {
   min-height: 231px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  word-break: break-all;
 }
 
 .catalog-item:hover .catalog-card  {
@@ -1309,7 +1312,7 @@ th sup {
 
 /* Пагинатор*/
 
-.paginator{
+.paginator {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1362,9 +1365,4 @@ th sup {
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   color: var(--black-opacity-low);
 }
-/*
-.popap-catalog {
-  position: absolute;
-  top: 2350px;
-}
-*/
+
