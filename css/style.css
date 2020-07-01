@@ -61,16 +61,18 @@ img {
 .container {
   width: 1160px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .large-container {
-  width: 1440px;
+  min-width: 1160px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
 /*grid*/
 
-.page{
+.page {
   height: 100%;
 }
 
@@ -100,7 +102,9 @@ img {
 
 .main-header {
   background-color: var(--basic-grey);
+  /*padding: 0 20px;*/
   padding-top: 48.98px;
+
 }
 
 .main-navigation {
@@ -236,7 +240,7 @@ img {
   padding-top: 62px;
 }
 
-.slaider-list-item:first-child h2 {
+.slaider-list-item h2 {
   margin-top: 0;
   padding-top: 10px;
 }
@@ -251,12 +255,20 @@ img {
 
 .slaider-list-item p {
   color: var(--light-black);
-  margin-bottom: 0;
+  margin-bottom: 27px;
+  margin-top: 37px;
+}
+
+.slaider-list-item:first-child p {
   margin-top: 25px;
+  margin-bottom: 38px;
+}
+
+.slaider-list-item:first-child {
+  margin-bottom: 40px;
 }
 
 .slaider-btn {
-  margin-top: 40px;
   background-color: var(--basic-red);
   padding-top: 17px;
   padding-right: 54px;
@@ -546,7 +558,6 @@ th sup {
   border-bottom: 2px solid var(--basic-grey);
   margin-bottom: 80px;
   display: flex;
-  /*justify-content: space-between;*/
   padding-left: 31px;
 }
 
@@ -630,7 +641,7 @@ th sup {
 .map {
   display: flex;
   background-image: url("../img/map1.png");
-  width: 1440px;
+  /*min-width: 1440px;*/
   min-height: 416px;
 }
 
@@ -736,7 +747,6 @@ th sup {
   opacity: 0.3;
 }
 
-*/
 .suggest {
   color: var(--lighter-black);
   line-height: 22px;
@@ -770,6 +780,7 @@ th sup {
   padding-left: 100px;
   position: fixed;
   z-index: 10;
+  top: 150px;
   left: 240px;
   box-sizing: border-box;
 }
@@ -831,7 +842,7 @@ th sup {
   line-height: 53px;
   margin-top: 65px;
   margin-left: 1px;
-  margin-bottom: 12px;
+  margin-bottom: 37px;
 }
 
 .popap p {
@@ -866,16 +877,20 @@ th sup {
   margin-bottom: 30px;
 }
 
+.popap-form p:nth-child(3) {
+ margin-left: 2px;
+}
+
 .popap textarea {
   width: 761px;
-  min-height: 115.59px;
+  min-height: 117px;
   border: 2px solid var(--form-border);
   box-sizing: border-box;
   border-radius: 3px;
   padding: 16px;
   padding-top: 15px;
   margin-top: 5px;
-  margin-bottom: 38px;
+  margin-bottom: 42px;
 }
 
 .popap input[type="text"]:hover,
@@ -908,7 +923,7 @@ th sup {
 
 .popap button[type="button"] {
   position: absolute;
-  top: -50px;
+  top: -75px;
   right: -15px;
   z-index: 10;
   border: none;
@@ -1026,7 +1041,7 @@ th sup {
 }
 
 .grid-type {
-  margin-top: 54px;
+  margin-top: 53px;
 }
 
 .grid-item {
@@ -1187,12 +1202,12 @@ th sup {
 
 .price-controls label {
   text-transform: uppercase;
+  line-height: 22px;
 }
 
 .price-controls input {
   width: 60px;
-  padding: 11px;
-  padding-left: 9px;
+  padding: 9px;
   margin-left: 10px;
   text-align: center;
   color: var(--light-black);
@@ -1201,6 +1216,7 @@ th sup {
   background: var(--basic-grey);
   font-family: inherit;
   font-size: inherit;
+  line-height: 22px;
 }
 
 .grid-type,
@@ -1301,16 +1317,20 @@ th sup {
 .catalog-card {
   position: absolute;
   z-index: 10;
-  left: 1px;
   bottom: 0;
   display: none;
   background-color:  var(--basic-grey);
   text-align: center;
-  width: 360px;
+  width: 100%;
   min-height: 231px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   word-break: break-all;
+}
+
+.catalog-card h3 {
+  margin-top: 26px;
+  margin-bottom: 0;
 }
 
 .catalog-item:hover .catalog-card  {
@@ -1338,9 +1358,15 @@ th sup {
   opacity: 0.3;
 }
 
-.description {
+.catalog-card .description {
+  margin-top: 12px;
+  margin-bottom: 32px;
   line-height: 18px;
   color: var(--extra-light-black);
+}
+
+.catalog-item:first-child  .description{
+  margin-right: 5px;
 }
 
 .btn-price {
