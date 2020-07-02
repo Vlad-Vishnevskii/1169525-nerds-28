@@ -385,6 +385,7 @@ img {
   text-transform: uppercase;
   color: var(--basic-white);
   border-radius: 3px;
+  vertical-align: middle;
 }
 
 .btn-red,
@@ -543,7 +544,7 @@ img {
   padding-left: 22px;
 }
 
-th sup {
+.superscript {
   font-size: 26px;
   line-height: 40px;
   top: -15px;
@@ -592,26 +593,6 @@ th sup {
 
 .partner {
   opacity: 0.2;
-}
-
-.partners li:nth-child(1) img {
-  width: 199px;
-  min-height: 67.82px;
-}
-
-.partners li:nth-child(2) img {
-  width: 209px;
-  min-height: 90px;
-}
-
-.partners li:nth-child(3) img {
-  width: 185px;
-  min-height: 52px;
-}
-
-.partners li:nth-child(4) img {
-  width: 173px;
-  min-height: 84px;
 }
 
 .partners li::after {
@@ -678,6 +659,10 @@ th sup {
 
 .contacts p:nth-child(3) {
   margin-bottom: 37.29px;
+}
+
+.contacts .telephone {
+  color: black;
 }
 
 .btn-write {
@@ -1006,7 +991,7 @@ th sup {
   margin-right: 0;
 }
 
-.sort-menu h3{
+.sort-menu h3 {
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
@@ -1021,11 +1006,11 @@ th sup {
   color: var(--basic-black);
 }
 
-.btn-down::before{
+.btn-down::before {
   content: url("../img/icon-down-dir.svg");
 }
 
-.btn-up{
+.btn-up {
   content: url("../img/icon-up-dir.svg");
 }
 
@@ -1081,8 +1066,12 @@ th sup {
   opacity: 1;
 }
 
-.filter-input-radio:active + label::before {
+.filter-input-radio:disabled + label::before {
   opacity: 0.1;
+}
+
+.filter-input-radio:disabled + label {
+  opacity: 0.3;
 }
 
 .grid-type h3 {
@@ -1122,12 +1111,17 @@ th sup {
   opacity: 0.4;
 }
 
-.filter-input-checkbox:hover + label::before {
+.filter-input-checkbox:hover + label::before,
+.filter-input-checkbox:focus + label::before {
   opacity: 1;
 }
 
-.filter-input-checkbox:active + label::before {
+.filter-input-checkbox:disabled + label::before {
   opacity: 0.1;
+}
+
+.filter-input-checkbox:disabled + label {
+  opacity: 0.3;
 }
 
 .filter h3 {
@@ -1330,6 +1324,17 @@ th sup {
   word-break: break-all;
 }
 
+.catalog-item:nth-child(2n-1) .description {
+  margin-right: 10px;
+}
+
+.catalog-item:nth-child(2n-1) p:last-child {
+  margin-right: 7px;
+}
+.catalog-item:nth-child(4) .description {
+  margin-right: 5px;
+}
+
 .catalog-card h3 {
   margin-top: 26px;
   margin-bottom: 0;
@@ -1367,10 +1372,6 @@ th sup {
   color: var(--extra-light-black);
 }
 
-.catalog-item:first-child  .description{
-  margin-right: 5px;
-}
-
 .btn-price {
   display: inline-block;
   background-color: var(--basic-red);
@@ -1379,6 +1380,7 @@ th sup {
   width: 200px;
   padding-top: 17px;
   padding-bottom: 15px;
+  vertical-align: middle;
 }
 
 .btn-price:hover {
@@ -1444,4 +1446,3 @@ th sup {
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   color: var(--black-opacity-low);
 }
-
